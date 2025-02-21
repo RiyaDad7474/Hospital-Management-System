@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4c9baf;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #4c6aaf;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px 20px;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(1);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .form-container {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container input,
+        .form-container select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .form-container .close-btn {
+            background-color: #f44336;
+            margin-top: 10px;
+        }
+
+        /* Animation for form reveal */
+        .form-container {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Hospital Management System
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Select an Option:</h2>
+            <button class="btn" onclick="showEmergencyBooking()">Emergency Seat Booking</button>
+            <button class="btn" onclick="showPayment()">Treatment Payment</button>
+            <button class="btn" onclick="showDoctors()">Doctor List & Appointment</button>
+            <button class="btn" onclick="showHospitalDetails()">Hospital Details</button>
+            <button class="btn" onclick="showPatientDetails()">Patient Details</button>
+            <button class="btn" onclick="showMedicineDetails()">Medicine Details</button>
+            <button class="btn" onclick="showMedicinePrescription()">Medicine Prescription</button>
+            <button class="btn" onclick="showBedAllocation()">Bed Allocation</button>
+            <button class="btn" onclick="exitSystem()">Exit</button>
+        </div>
+
+        <!-- Emergency Booking Form -->
+        <div id="emergencyBookingForm" class="form-container">
+            <h3>Emergency Seat Booking</h3>
+            <form action="#" method="POST">
+                <label for="name">Patient Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Patient Age:</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="disease">Disease:</label>
+                <input type="text" id="disease" name="disease" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button class="btn" type="submit">Submit</button>
+                <button class="btn close-btn" type="button" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        function showEmergencyBooking() {
+            document.getElementById('emergencyBookingForm').style.display = 'block';
+        }
+
+        function closeForm() {
+            document.getElementById('emergencyBookingForm').style.display = 'none';
+        }
+
+        function showPayment() {
+            alert("Treatment Payment Page");
+        }
+
+        function showDoctors() {
+            alert("Doctor List & Appointment Page");
+        }
+
+        function showHospitalDetails() {
+            alert("Hospital Details Page");
+        }
+
+        function showPatientDetails() {
+            alert("Patient Details Page");
+        }
+
+        function showMedicineDetails() {
+            alert("Medicine Details Page");
+        }
+
+        function showMedicinePrescription() {
+            alert("Medicine Prescription Page");
+        }
+
+        function showBedAllocation() {
+            alert("Bed Allocation Page");
+        }
+
+        function exitSystem() {
+            window.close();
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+Patient Name: rahul singhi
+Patient Age: 80
+Disease: mental health
+Patient's address: ce campus
+Mobile Number: 1234567890
+Appoint Date: now
+Gender: 9she
+
+
+Patient Name: asdf
+Patient Age: 21
+Disease: asdf
+Patient's address: sdf
+Mobile Number: 1234567890
+Appoint Date: 12344
+Gender: asdfg
+
+
+Patient Name: wde
+Patient Age: 0
+Disease: asdf
+Patient's address: sdf
+Mobile Number: 1234567890
+Appoint Date: 12344
+Gender: asdfg
+
+
+Patient Name: Raviii
+Patient Age: 21
+Disease: mental
+Patient's address: ce
+Mobile Number: 1234567890
+Appoint Date: 12/02/2025
+Gender: male
+
+
+Patient Name: sd
+Patient Age: 0
+Disease: 
+Patient's address: 
+Mobile Number: 1983482909
+Appoint Date: 
+Gender: 
+
+
